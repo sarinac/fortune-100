@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	text-align: left;
+}
+
+body {
+    background-color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 0px;
+	color: #717171;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 0px;
+	color: #717171;
+}
+
+h3 {
+	font-size: 22px;
+	color: #717171;
+}
+
+p {
+	font-size: 24px;
+	color: #8e8e8e;
+}
+
+/* ----------------- Header ----------------- */
+
+#fortune-header-rect {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	background-color: #ed1c24;
+	padding: 20px;
+	color: #ffffff;
+	width: 400px;
+	text-align: center;
+}
+
+#fortune-header-title {
+	margin: 10px auto;
+	font-size: 60px;
+	font-weight: bold;
+	font-stretch: condensed;
+	font-family: Arial Narrow;
+}
+
+#fortune-header-subtitle {
+	margin: 10px auto;
+	font-size: 20px;
+	letter-spacing: 25px;
+}
+
+#creation { 
+	position: absolute;
+	top: 150px;
+	left: 40px;
+}
+
+/* ----------------- Description ----------------- */
+
+#fortune-introduction {
+	position: absolute;
+	top: 100px;
+	left: 700px;
+	width: 800px;
+	border: #000000;
+}
+
+#fortune-description {
+	position: absolute;
+	top: 650px;
+	left: 1100px;
+	width: 400px;
+}
+
+/* ----------------- Radio Buttons ----------------- */
+
+.control {
+	margin-left: 20px;
+}
+
+.radio {
+	font-size: 20px;
+	color: #8e8e8e;
+	display: block;
+	position: relative;
+	padding-left: 20px;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+	opacity: 0;
+}
+
+.radio-custom {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .radio-custom {
+ 	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a red background */
+.radio input:checked ~ .radio-custom {
+ 	background-color: #ed1c24;
+}
+
+/* Create the indicator (hidden when not checked) */
+.radio-custom:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the radio-custom when checked */
+.radio input:checked ~ .radio-custom:after {
+ 	display: block;
+}
+
+/* Style the radio-custom/indicator */
+.radio .radio-custom:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* ----------------- SVG ----------------- */
+#fortune-legend rect {
+	stroke: #717171;
+}
+
+#fortune-legend text {
+	fill: #717171;
+}
+
+#fortune-chart {
+	position: absolute;
+	top: 160px;
+	left: 40px;
+	stroke: #717171;
+	fill: #f6f6f6;
+}
+
+#fortune-chart-2 {
+	position: absolute;
+	top: 1600px;
+	left: 40px;
+	stroke: #717171;
+	fill: #f6f6f6;
+}
+
+#fortune-chart text, #fortune-chart-2 text {
+	fill: #717171;
+	stroke: none;
+}
+
+.annotation {
+	font-size: 12px;
+}
+/* ----------------- Tooltip ----------------- */
+
+#tooltip {
+	position: absolute;
+	width: auto;
+	height: auto;
+	padding: 20px 20px 20px;
+	background-color: #ffffff;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	pointer-events: none
+}
+
+#tooltip.hidden {
+	display: none;
+}
+
+#tooltip p {
+	margin: 0;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+#tooltip-name {
+	font-size: 24px;
+}
+
+.tooltip {
+	line-height: 140%;
+}
+
+#tooltip-underline {
+	width: auto;
+	height: 5px;
+	margin-bottom: 10px;
+}
+

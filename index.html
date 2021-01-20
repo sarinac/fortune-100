@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fortune 100 Companies in 2019</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<!-- Header -->
+	<div id='fortune-header-rect'>
+		<span id='fortune-header-title'>FORTUNE 100</span><br>
+		<span id='fortune-header-subtitle'><span style='color:#ed1c24;'>.</span>RANKINGS</span>
+	</div>
+	<div id='creation'>
+		<h3>Drawn by Sarina Chen</h3>
+	</div>
+	
+	<!-- Introduction Description -->
+	<div id='fortune-introduction'>
+		<h2>The History</h2>
+		<p>
+			The Fortune 100 is a subset of the annual list compiled and published by Fortune magazine that ranks the largest United States corporations by total revenue for their respective fiscal years. Ths list includes publicly held companies and privately held companies for which revenues are publicly available.
+		</p>
+		<p>
+			The Fortune 500 was first published in 1955 and was originally limited to companies in the manufacturing, mining, and energy industries. The first top 10 companies were General Motors, Jersey Standard, U.S. Steel, General Electric, Esmark, Chrysler, Armour, Gulf Oil, Mobil and DuPont. Much has changed from its inception to current times.
+		</p>
+		<h2>The 2019 List</h2>
+		<p>
+			As of 2019, Fortune 500 marks the 65th running of the list. In total, Fortune 500 companies represent two-thirds of the U.S. GDP with $13.7 trillion in revenues, $1.1 trillion in profits, $22.6 trillion in market value, and employ 28.7 million people worldwide.
+		</p>
+		<p>
+			
+		</p>
+	</div>
+
+	<!-- Chart -->
+	<div id='fortune-chart'>
+		<div id="tooltip" class="hidden">
+			<p><strong id="tooltip-name" class="tooltip">Company Name</strong></p><br>
+			<div id="tooltip-underline"></div>
+			<p><span id="tooltip-rank" class="tooltip">100</span></p>
+			<p><span id="tooltip-revenues" class="tooltip">100</span></p>
+			<p><span id="tooltip-market" class="tooltip">100</span></p>
+			<p><span id="tooltip-employees" class="tooltip">100</span></p>
+			<p><span id="tooltip-years" class="tooltip">100</span></p>
+		</div>
+	</div>
+
+	<!-- Legend Description -->
+	<div id='fortune-description'>
+		<h2>How to Read the Chart</h2>
+		<p>Each layer of the circle represents a different attribute, noted to the left. The color represents a different sector group.</p>
+
+		<div id="fortune-legend"></div>
+
+		<p>Select 1 of the 6 below to sort the top 100 by the selected attribute.</p>
+
+		<div class="control">
+			<label class="radio">
+				<input type="radio" name="fortune-select" value="years">
+				<span class="radio-custom"></span>
+				Years on Fortune 500
+			</label><br>
+			<label class="radio">
+				<input type="radio" name="fortune-select" value="employees">
+				<span class="radio-custom"></span>
+				Number of Employees
+			</label><br>
+			<label class="radio">
+				<input type="radio" name="fortune-select" value="market-val">
+				<span class="radio-custom"></span>
+				Market Value
+			</label><br>
+			<label class="radio">
+				<input type="radio" name="fortune-select" value="revenue-pct">
+				<span class="radio-custom"></span>
+				Revenue % of Profit
+			</label><br>
+			<label class="radio">
+				<input type="radio" name="fortune-select" value="cost-pct">
+				<span class="radio-custom"></span>
+				Cost % of Profit
+			</label><br>
+			<label class="radio">
+				<input type="radio" name="fortune-select" checked="checked" value="rank">
+				<span class="radio-custom"></span>
+				Rank
+			</label>
+		</div>
+
+	</div>
+
+	<!-- Chart (2) -->
+	<div id='fortune-chart-2'>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="js/helperFunctions.js"></script>
+	<script src="js/first.js"></script>
+	<script src="js/second.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
